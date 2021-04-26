@@ -3,6 +3,7 @@ import axios from "axios";
 export const FETCH_ISS = "FETCH_ISS";
 export const FETCH_LOCATION = "FETCH_LOCATION";
 export const FETCH_WEATHER = "FETCH_WEATHER"
+export const FETCH_APOD = "FETCH_APOD"
 
 export function fetchISSCoords() {
   return axios.get(`http://api.open-notify.org/iss-now.json`)
@@ -40,5 +41,18 @@ export function fetchWeather(lat, lon) {
   })
   .catch(error => {
     alert('Bad input, try again');
+  });
+};
+
+export function fetchApod() {
+  return axios.get(`https://api.nasa.gov/planetary/apod?api_key=HyG17G8Ugws1g9wF1zemdwudBeZHnde5auk74Wuc`)
+  .then(response => {
+    return {
+      type: FETCH_APOD,
+      payload: response
+    };
+  })
+  .catch(error => {
+    alert('Error');
   });
 };

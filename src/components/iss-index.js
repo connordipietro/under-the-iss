@@ -5,6 +5,7 @@ import Moment from 'react-moment';
 import LocationInfo from './location-info'
 import MapISS from './iss-map'
 import WeatherISS from './iss-weather'
+import APOD from './apod'
 
 const ISSIndex = () => {
   const data = useSelector(state => state.data);
@@ -14,7 +15,14 @@ const ISSIndex = () => {
     dispatch(fetchISSCoords())
   }
 
+  function renderApod () {
+    if (_.isEmpty(data.IssInfo)) {
+      return <APOD></APOD>
+    }
+  }
+
   function renderCoords () {
+  
     if (!_.isEmpty(data.IssInfo)) {
       return <div>
        <span><h5>ISS Coordinates: Lat: {data.coords.lat} Lon: {data.coords.lon}</h5></span>
@@ -27,18 +35,18 @@ const ISSIndex = () => {
   }
   return (
     <div>
-      <div className="jumbotron jumbotron-fluid">
-  <div className="container">
-    <h1 className="display-4">Under The ISS</h1>
-    <p className="lead">What's going on underneath the International Space Station, right now?</p>
-    <hr></hr>
-    <button type="button" className="btn btn-primary btn-secondary" onClick={() => handleClick()}>Find Out</button>
-  </div>
-  </div>
-  <div className="container col-md-8 text-center">
-  <div>{renderCoords()}</div>
-  </div>
-     
+      <div className="jumbotron jumbotron-fluid mb-0">
+        <div className="container">
+          <h1 className="display-4">Under The ISS</h1>
+          <p className="lead">What's going on underneath the International Space Station, right now?</p>
+          <hr></hr>
+          <button type="button" className="btn btn-primary btn-secondary" onClick={() => handleClick()}>Find Out</button>
+        </div>
+      </div>
+      <div>{renderApod()}</div>
+      <div className="container col-md-8 text-center">
+        <div>{renderCoords()}</div>
+      </div>
     </div>
   )
 }

@@ -17,7 +17,6 @@ ReactDOM.render(
   <Provider store={createStoreWithMiddleware(reducers)}>
     <Container>
       <ISSIndex/>   
-      <MapISS/>
     </Container> 
   </Provider>,
   document.getElementById("root")

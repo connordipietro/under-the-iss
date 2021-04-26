@@ -17,7 +17,7 @@ const ISSIndex = () => {
       return <div>
         <h1>ISS Coords</h1>
         <h1>Lat: {posts.coords[0].iss_position.latitude}</h1>
-        <h1>Lat: {posts.coords[0].iss_position.longitude}</h1>
+        <h1>Lang: {posts.coords[0].iss_position.longitude}</h1>
         <h1>TimeStamp: {posts.coords[0].timestamp}</h1>
         </div>
 

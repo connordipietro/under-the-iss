@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import _ from 'lodash';
 
 const ISSIndex = () => {
-  const posts = useSelector(state => state.posts);
+  const data = useSelector(state => state.data);
   const dispatch = useDispatch();
 
   const handleClick = () => {
@@ -12,15 +12,14 @@ const ISSIndex = () => {
   }
 
   function renderCoords () {
-    if (!_.isEmpty(posts.coords)) {
-      console.log(posts.coords[0]);
+    if (!_.isEmpty(data.IssInfo)) {
+      console.log(data.coords);
       return <div>
         <h1>ISS Coords</h1>
-        <h1>Lat: {posts.coords[0].iss_position.latitude}</h1>
-        <h1>Long: {posts.coords[0].iss_position.longitude}</h1>
-        <h1>TimeStamp: {posts.coords[0].timestamp}</h1>
+        <h1>Lat: {data.coords.lat}</h1>
+        <h1>Long: {data.coords.lang}</h1>
+        <h1>TimeStamp: {data.IssInfo[0].timestamp}</h1>
         </div>
-
     }
   }
   return (

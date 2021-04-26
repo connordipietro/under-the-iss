@@ -2,7 +2,7 @@ import { combineReducers } from "redux";
 import IssReducer from "./iss-reducer";
 
 const rootReducer = combineReducers({
-  posts: IssReducer,
+  data: IssReducer,
 });
 
 export default rootReducer;

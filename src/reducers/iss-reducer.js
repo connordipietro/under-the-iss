@@ -15,7 +15,7 @@ const IssReducer = function(state = DEFAULT_STATE, action) {
         IssInfo: [action.payload.data],
         coords: {
           lat: action.payload.data.iss_position.latitude,
-          lang: action.payload.data.iss_position.latitude
+          lang: action.payload.data.iss_position.longitude
         }
       };
     default:

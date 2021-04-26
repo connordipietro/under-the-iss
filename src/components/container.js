@@ -1,4 +1,4 @@
-import ISSIndex from ''
+
 
 const container = (props) => {
   //console.log(props)

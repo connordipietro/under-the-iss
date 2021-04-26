@@ -1,6 +1,7 @@
 import { fetchWeather } from '../actions';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react'
+import Moment from 'react-moment';
 
 const Weather = () => {
   const data = useSelector(state => state.data);
@@ -18,13 +19,14 @@ const Weather = () => {
       return (
         //all this needs to be put into state and then called there, this is just to see the data being returned for now
         <div>
-        <h5>Temp: {weather.result.data.main.temp}</h5>
-        <h5>Humidity: {weather.result.data.main.humidity}</h5>
-        <h5>Pressure: {weather.result.data.main.pressure}</h5>
-        <h5>Name: {weather.result.data.name}</h5>
-        <h5>Sunrise: {weather.result.data.sys.sunrise}</h5>
-        <h5>Sunset: {weather.result.data.sys.sunset}</h5>
-        <h5>TimeZone: {weather.result.data.timezone}</h5>
+          <span>
+            <h5>Temperature: {weather.result.data.main.temp} Humidity: {weather.result.data.main.humidity} Pressure: {weather.result.data.main.pressure} 
+            </h5>
+          </span>
+          <span>
+            <h5>Sunrise: <Moment unix format="hh:mm:ss a">{weather.result.data.sys.sunrise}</Moment> Sunset: <Moment unix format="hh:mm:ss a">{weather.result.data.sys.sunset}</Moment> TimeZone: {weather.result.data.timezone}
+            </h5>
+        </span>
       </div>
       )
     }

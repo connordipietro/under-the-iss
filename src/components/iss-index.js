@@ -19,7 +19,7 @@ const ISSIndex = () => {
       return <div>
         <h5>ISS Coords</h5>
         <h5>Lat: {data.coords.lat}</h5>
-        <h5>Lan: {data.coords.lon}</h5>
+        <h5>Lon: {data.coords.lon}</h5>
         <h5>TimeStamp: <Moment unix>{data.IssInfo[0].timestamp}</Moment></h5>
         <LocationInfo></LocationInfo>
         <MapISS />

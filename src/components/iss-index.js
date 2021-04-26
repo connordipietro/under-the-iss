@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import _ from 'lodash';
 import Moment from 'react-moment';
 import LocationInfo from './location-info'
+import MapISS from './iss-map'
 
 const ISSIndex = () => {
   const data = useSelector(state => state.data);
@@ -21,6 +22,7 @@ const ISSIndex = () => {
         <h1>Long: {data.coords.lang}</h1>
         <h1>TimeStamp: <Moment unix>{data.IssInfo[0].timestamp}</Moment></h1>
         <LocationInfo></LocationInfo>
+        <MapISS />
         </div>
     }
   }

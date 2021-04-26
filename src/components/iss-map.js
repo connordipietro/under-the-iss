@@ -6,10 +6,10 @@ const MapISS = () => {
   return (
     <iframe
     title="ISS-LOCATION"
-  width="650"
-  height="450"
+  width="950"
+  height="250"
   frameBorder="0" 
-  src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyD9reTsOYE-u-m03_Vr_nR49R2f13iNeSQ&q=${data.lat},${data.lang}&center=${data.lat},${data.lang}&zoom=2`} allowFullScreen>
+  src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyD9reTsOYE-u-m03_Vr_nR49R2f13iNeSQ&q=${data.lat},${data.lon}&center=${data.lat},${data.lon}&zoom=3`} allowFullScreen>
 </iframe>
   )
 }

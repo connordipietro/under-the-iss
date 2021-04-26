@@ -2,13 +2,13 @@ import { fetchISSCoords } from '../actions';
 import { useDispatch, useSelector } from 'react-redux';
 import _ from 'lodash';
 import Moment from 'react-moment';
+import LocationInfo from './location-info'
 
 const ISSIndex = () => {
   const data = useSelector(state => state.data);
   const dispatch = useDispatch();
 
   const handleClick = () => {
-    //console.log('click')
     dispatch(fetchISSCoords())
   }
 
@@ -20,6 +20,7 @@ const ISSIndex = () => {
         <h1>Lat: {data.coords.lat}</h1>
         <h1>Long: {data.coords.lang}</h1>
         <h1>TimeStamp: <Moment unix>{data.IssInfo[0].timestamp}</Moment></h1>
+        <LocationInfo></LocationInfo>
         </div>
     }
   }

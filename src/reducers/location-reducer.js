@@ -8,7 +8,7 @@ const LocationReducer = function(state = DEFAULT_STATE, action) {
   switch (action.type) {
     case FETCH_LOCATION:
       return {
-        result: action.payload.data.results[0].formatted_address || 'Error',
+        result: action.payload.data.results || 'Error',
       };
     default:
       return state;

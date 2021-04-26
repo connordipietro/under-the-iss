@@ -12,7 +12,7 @@ const LocationInfo = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [fetchLocationInfo]);
   
-  return <div><h2>The ISS Is Currently Above: {location.formatted || "Unkown"}</h2></div>
+  return <div><h2>The ISS Is Currently Above: {location.result}</h2></div>
 }
 
 export default LocationInfo;

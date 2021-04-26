@@ -18,7 +18,8 @@ export function fetchISSCoords() {
 };
 
 export function fetchLocationInfo(lat, lang) {
-  return axios.get(`https://api.opencagedata.com/geocode/v1/json?key=f53139d6d0184e51919c421f20fa4b9a&q=${lat}%2C+${lang}&pretty=1&no_annotations=1`)
+  
+  return axios.get(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lang}&key=AIzaSyCwB-2_AckUG3hMtx4P2X2kUTcXt2wenRc`)
   .then(response => {
     return {
       type: FETCH_LOCATION,

@@ -20,12 +20,12 @@ const Weather = () => {
         <div>
           <div className="container">
             <ul className="list-group list-group-flush text-left">
-              <li class="list-group-item">Temperature: {weather.result.data.main.temp }{'\u2109'} </li>
-              <li class="list-group-item">Humidity: {weather.result.data.main.humidity}%</li>
-              <li class="list-group-item">Pressure: {weather.result.data.main.pressure}hPa</li>
-              <li class="list-group-item">Sunset: <Moment unix format="hh:mm:ss a">{weather.result.data.sys.sunset}</Moment></li>
-              <li class="list-group-item">Sunrise: <Moment unix format="hh:mm:ss a">{weather.result.data.sys.sunrise}</Moment></li>
-              <li class="list-group-item">TimeZone: {weather.result.data.timezone}</li>
+              <li className="list-group-item">Temperature: {weather.result.data.main.temp }{'\u2109'} </li>
+              <li className="list-group-item">Humidity: {weather.result.data.main.humidity}%</li>
+              <li className="list-group-item">Pressure: {weather.result.data.main.pressure}hPa</li>
+              <li className="list-group-item">Sunset: <Moment unix format="hh:mm:ss a">{weather.result.data.sys.sunset}</Moment></li>
+              <li className="list-group-item">Sunrise: <Moment unix format="hh:mm:ss a">{weather.result.data.sys.sunrise}</Moment></li>
+              <li className="list-group-item">TimeZone: {weather.result.data.timezone}</li>
             </ul>
           </div>
       </div>

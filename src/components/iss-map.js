@@ -2,7 +2,7 @@ import { useSelector } from 'react-redux';
 
 const MapISS = () => {
   const data = useSelector(state => state.data.coords);
-
+   
   return (
     <iframe
     title="ISS-LOCATION"
@@ -17,3 +17,5 @@ const MapISS = () => {
 export default MapISS;
 
 
+
+  

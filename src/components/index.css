@@ -2,3 +2,9 @@
   height: 50vh;
   width: 100%;
 }
+
+.head-img {
+  background-image: url("../media/wp7849306.jpg");
+  background-repeat: repeat;
+  background-size: 100% 100%;
+}

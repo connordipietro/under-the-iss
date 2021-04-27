@@ -5,7 +5,7 @@ import { useEffect } from 'react'
 const ApodView = () => {
   const apodData = useSelector(state => state.apod);
   const dispatch = useDispatch();
-    
+  
   useEffect(() => {
     dispatch(fetchApod())
   // eslint-disable-next-line react-hooks/exhaustive-deps

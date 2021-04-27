@@ -30,8 +30,8 @@ const ISSIndex = () => {
       return <div>
           <div className="container">
             <div className="row">
-              <div className="col-sm">ISS Coordinates: Lat: {data.coords.lat} Lon: {data.coords.lon}</div>
-              <div className="col-sm"><Moment unix>{data.IssInfo[0].timestamp}</Moment></div>
+              <div className="col-sm"><h5> Coordinates: Lat: {data.coords.lat} Lon: {data.coords.lon}</h5></div>
+              <div className="col-sm"><h5><Moment unix>{data.IssInfo[0].timestamp}</Moment></h5></div>
             </div>
             <div className="row">
               <div className="col-sm"><LocationInfo></LocationInfo></div>
@@ -45,14 +45,16 @@ const ISSIndex = () => {
   }
   return (
     <div>
-      <div className="jumbotron jumbotron-fluid mb-0">
+     
+      <div className="jumbotron jumbotron-fluid mb-0 head-img mb-3">
         <div className="container">
-          <h1 className="display-4">Under The ISS</h1>
-          <p className="lead">What's going on underneath the International Space Station, right now?</p>
+          <h1 className="display-4 text-white">Under The ISS</h1>
+          <p className="lead text-white">What's going on underneath the International Space Station, right now?</p>
           <hr></hr>
           <button type="button" className="btn btn-primary btn-secondary" onClick={() => handleClick()}>Find Out</button>
         </div>
       </div>
+      
       <div>{renderApod()}</div>
       <div className="container col-md-8 text-center">
         <div>{renderCoords()}</div>

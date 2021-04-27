@@ -4,6 +4,7 @@ import _ from 'lodash';
 import Moment from 'react-moment';
 import LocationInfo from './location-info'
 import WeatherISS from './iss-weather'
+import Distances from './iss-astronomy'
 import APOD from './apod'
 import LeafletMap from './iss-map-2'
 import Tabs from 'react-bootstrap/Tabs'
@@ -28,9 +29,9 @@ const ISSIndex = () => {
   function renderBody () {
     if (!_.isEmpty(data.IssInfo)) {
       return <div>
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-sm">
+          <div className="container-fluid">
+            <div className="row">
+              <div className="col-sm">
                 <div className="row">
                  <div className="col-sm">
                  <div>
@@ -50,7 +51,7 @@ const ISSIndex = () => {
                   </div>
                 </div>
               </div>
-                <div class="col-sm">  {/* column 2  */}
+                <div className="col-sm">  {/* column 2  */}
                   <div className="row">
                    <div className="col-sm">
                      <h3><u>Information</u></h3>
@@ -58,12 +59,12 @@ const ISSIndex = () => {
                   </div>
                 <div className="row">
                   <div className="col-sm">
-                    <Tabs defaultActiveKey="atmosphere" id="uncontrolled-tab-example">
-                      <Tab eventKey="atmosphere" title="Atmosphere">
+                    <Tabs defaultActiveKey="weather" id="uncontrolled-tab-example">
+                      <Tab eventKey="weather" title="Weather">
                         <WeatherISS></WeatherISS>
                      </Tab>
-                     <Tab eventKey="distances" title="Distances">
-                      Distances here
+                     <Tab eventKey="distances" title="Astronomy">
+                      <Distances></Distances>
                      </Tab>
                     <Tab eventKey="crewInfo" title="Crew Information">
                      Crew Information Here

@@ -4,6 +4,7 @@ export const FETCH_ISS = "FETCH_ISS";
 export const FETCH_LOCATION = "FETCH_LOCATION";
 export const FETCH_WEATHER = "FETCH_WEATHER"
 export const FETCH_APOD = "FETCH_APOD"
+export const FETCH_PEOPLE_IN_SPACE = "FETCH-PEOPLE_IN_SPACE"
 
 export function fetchISSCoords() {
   return axios.get(`http://api.open-notify.org/iss-now.json`)
@@ -56,3 +57,5 @@ export function fetchApod() {
     alert('Error');
   });
 };
+
+

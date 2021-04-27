@@ -4,6 +4,7 @@ import LocationReducer from "./location-reducer";
 import WeatherReducer from "./weather-reducer";
 import ApodReducer from "./apod-reducer";
 
+
 const rootReducer = combineReducers({
   data: IssReducer,
   location: LocationReducer,

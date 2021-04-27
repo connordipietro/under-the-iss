@@ -7,6 +7,7 @@ import LocationInfo from './location-info'
 import WeatherISS from './iss-weather'
 import APOD from './apod'
 import LeafletMap from './iss-map-2'
+import IconPopup from './icon-popup'
 
 const ISSIndex = () => {
   const data = useSelector(state => state.data);
@@ -40,6 +41,7 @@ const ISSIndex = () => {
      {/*    <MapISS /> */}
         <LeafletMap></LeafletMap>
         <WeatherISS></WeatherISS>
+        
         </div>
     }
   }

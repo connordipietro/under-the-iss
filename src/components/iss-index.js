@@ -31,8 +31,11 @@ const ISSIndex = () => {
               <div class="col-sm">
                 <div className="row">
                  <div className="col-sm">
-                   <LocationInfo></LocationInfo>
-                 </div>
+                 <div>
+                    <h3><u>Location</u></h3>
+                      <LocationInfo></LocationInfo>
+                    </div>
+                  </div>
                 </div>
                   <div className="row">
                     <div className="col-sm">

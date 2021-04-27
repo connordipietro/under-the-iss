@@ -22,7 +22,7 @@ const Weather = () => {
             <table class="table table-striped table-sm text-left">
               <thead class="thead">
                <tr>
-                  <th scope="col">Weather</th>
+                  <th scope="col">Atmosphere</th>
                   <th scope="col">Astronomy</th>
                 </tr>
               </thead>

@@ -16,7 +16,7 @@ const LocationInfo = () => {
     if (location.result == null || undefined) {
       return <div></div>
     } else {
-      return <div><h5>The ISS Is Currently Above: {location.result}</h5></div>
+      return <div>The ISS Is Currently Above: {location.result}</div>
     }
   }
   

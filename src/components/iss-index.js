@@ -6,6 +6,8 @@ import LocationInfo from './location-info'
 import WeatherISS from './iss-weather'
 import APOD from './apod'
 import LeafletMap from './iss-map-2'
+import Tabs from 'react-bootstrap/Tabs'
+import Tab from 'react-bootstrap/Tab'
 
 const ISSIndex = () => {
   const data = useSelector(state => state.data);
@@ -49,6 +51,7 @@ const ISSIndex = () => {
                 </div>
               </div>
                 <div class="col-sm">  {/* column 2  */}
+
                   <div className="row">
                    <div className="col-sm">
                      <h3><u>Information</u></h3>
@@ -56,7 +59,17 @@ const ISSIndex = () => {
                   </div>
                 <div className="row">
                   <div className="col-sm">
-                   <WeatherISS></WeatherISS>
+                    <Tabs defaultActiveKey="atmosphere" id="uncontrolled-tab-example">
+                      <Tab eventKey="atmosphere" title="Atmosphere">
+                        <WeatherISS></WeatherISS>
+                     </Tab>
+                     <Tab eventKey="distances" title="Distances">
+                      Distances here
+                     </Tab>
+                    <Tab eventKey="contact" title="Crew Information">
+                     Crew Information Here
+                    </Tab>
+                  </Tabs>
                   </div>
                 </div>
               </div>

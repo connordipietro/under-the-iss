@@ -51,7 +51,6 @@ const ISSIndex = () => {
                 </div>
               </div>
                 <div class="col-sm">  {/* column 2  */}
-
                   <div className="row">
                    <div className="col-sm">
                      <h3><u>Information</u></h3>
@@ -66,7 +65,10 @@ const ISSIndex = () => {
                      <Tab eventKey="distances" title="Distances">
                       Distances here
                      </Tab>
-                    <Tab eventKey="contact" title="Crew Information">
+                    <Tab eventKey="crewInfo" title="Crew Information">
+                     Crew Information Here
+                    </Tab>
+                    <Tab eventKey="LOEInfo" title="Next Meteor Approach">
                      Crew Information Here
                     </Tab>
                   </Tabs>

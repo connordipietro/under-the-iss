@@ -35,6 +35,7 @@ export function fetchLocationInfo(lat, lon) {
 export function fetchWeather(lat, lon) {
   return axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=1fc1127bc926b88b171314897133dde9&units=imperial`)
   .then(response => {
+    console.log(response)
     return {
       type: FETCH_WEATHER,
       payload: response
@@ -70,3 +71,4 @@ export function fetchAstronomy(lat, lon) {
     alert('Error');
   });
 };
+

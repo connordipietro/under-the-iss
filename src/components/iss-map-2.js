@@ -5,13 +5,10 @@ import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 
 var ISSIcon = L.icon({
-  iconUrl: '956251-200.png',
-  iconSize: [75, 75],
-  iconAnchor: [25, 15],
+  iconUrl: 'iss_icon6.png',
+  iconSize: [70, 70],
   popupAnchor: [50, 25],
-  //shadowUrl: '956251-200.png',
-  shadowSize: [60, 40],
-  shadowAnchor: [30, 15]
+  shadowAnchor: [1, 1]
 });
 
 const LeafletMap = (props) => {
@@ -20,8 +17,8 @@ const LeafletMap = (props) => {
 
   function renderMap() {
     return (
-      <MapContainer className="map" center={position} zoom="2.5">
-        <TileLayer attribution='&amp;copy <a href="https://www.osm.org/copyright">OpenStreetMap</a> contributors'url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"/>
+      <MapContainer className="map" center={position} zoom="2.3">
+        <TileLayer attribution='&amp;copy <a href="https://www.osm.org/copyright">OpenStreetMap</a> contributors'url="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"/>
           <Marker position={position} icon={ISSIcon}>
             {/* <Popup>
                  <span>Info here</span>

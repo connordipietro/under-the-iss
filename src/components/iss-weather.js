@@ -19,16 +19,28 @@ const Weather = () => {
         //all this needs to be put into state and then called there, this is just to see the data being returned for now
         <div>
           <div className="container">
-            <div className="row">
-              <div className="col-sm">Sunrise: <Moment unix format="hh:mm:ss a">{weather.result.data.sys.sunrise}</Moment></div>
-              <div className="col-sm">Sunset: <Moment unix format="hh:mm:ss a">{weather.result.data.sys.sunset}</Moment></div>
-              <div className="col-sm">TimeZone: {weather.result.data.timezone}</div>
-            </div>
-            <div className="row">
-              <div className="col-sm">Temperature: {weather.result.data.main.temp}</div>
-              <div className="col-sm">Humidity: {weather.result.data.main.humidity}</div>
-              <div className="col-sm">Pressure: {weather.result.data.main.pressure}</div>
-            </div>
+            <table class="table table-striped table-sm text-left">
+              <thead class="thead">
+               <tr>
+                  <th scope="col">Weather</th>
+                  <th scope="col">Astronomy</th>
+                </tr>
+              </thead>
+              <tbody>
+               <tr>
+                <td>Temperature: {weather.result.data.main.temp}</td>
+                <td>Sunset: <Moment unix format="hh:mm:ss a">{weather.result.data.sys.sunset}</Moment></td>
+               </tr>
+               <tr>
+                <td>Humidity: {weather.result.data.main.humidity}</td>
+                <td>Sunrise: <Moment unix format="hh:mm:ss a">{weather.result.data.sys.sunrise}</Moment></td>
+               </tr>
+               <tr>
+                <td> Pressure: {weather.result.data.main.pressure}</td>
+                <td>TimeZone: {weather.result.data.timezone}</td>
+               </tr>
+              </tbody>
+            </table>
           </div>
       </div>
       )
@@ -43,3 +55,5 @@ const Weather = () => {
 }
 
 export default Weather;
+
+

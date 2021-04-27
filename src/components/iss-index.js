@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import _ from 'lodash';
 import Moment from 'react-moment';
 import LocationInfo from './location-info'
-//import MapISS from './iss-map'
 import WeatherISS from './iss-weather'
 import APOD from './apod'
 import LeafletMap from './iss-map-2'
@@ -24,22 +23,45 @@ const ISSIndex = () => {
     }
   }
 
-  function renderCoords () {
-  
+  function renderBody () {
     if (!_.isEmpty(data.IssInfo)) {
       return <div>
-          <div className="container">
-            <div className="row">
-              <div className="col-sm"><h5> Coordinates: Lat: {data.coords.lat} Lon: {data.coords.lon}</h5></div>
-              <div className="col-sm"><h5><Moment unix>{data.IssInfo[0].timestamp}</Moment></h5></div>
-            </div>
-            <div className="row">
-              <div className="col-sm"><LocationInfo></LocationInfo></div>
-            </div>
-          </div>      
-     {/*    <MapISS /> */}
-        <LeafletMap></LeafletMap>
-        <WeatherISS></WeatherISS>
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-sm">
+                <div className="row">
+                 <div className="col-sm">
+                 <div>
+                    <h3><u>Location</u></h3>
+                      <LocationInfo></LocationInfo>
+                    </div>
+                  </div>
+                </div>
+                  <div className="row">
+                    <div className="col-sm">
+                      <p className="lead">Lat: {data.coords.lat} Lon: {data.coords.lon} at <Moment unix format="hh:mm:ss" >{data.IssInfo[0].timestamp}</Moment> on <Moment unix format="MM/DD/YYYY" >{data.IssInfo[0].timestamp}</Moment></p>
+                    </div>
+                 </div>
+                <div className="row">
+                  <div className="col-sm">
+                    <LeafletMap></LeafletMap>
+                  </div>
+                </div>
+              </div>
+                <div class="col-sm">  {/* column 2  */}
+                  <div className="row">
+                   <div className="col-sm">
+                     <h3><u>Information</u></h3>
+                    </div>
+                  </div>
+                <div className="row">
+                  <div className="col-sm">
+                   <WeatherISS></WeatherISS>
+                  </div>
+                </div>
+              </div>
+             </div>
+          </div>
         </div>
     }
   }
@@ -54,10 +76,9 @@ const ISSIndex = () => {
           <button type="button" className="btn btn-primary btn-secondary" onClick={() => handleClick()}>Find Out</button>
         </div>
       </div>
-      
       <div>{renderApod()}</div>
-      <div className="container col-md-8 text-center">
-        <div>{renderCoords()}</div>
+      <div className="container-fluid text-center">
+        <div>{renderBody()}</div>
       </div>
     </div>
   )

@@ -3,7 +3,7 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import { useSelector } from 'react-redux'
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
-import { htmlPrefilter } from "jquery";
+//import { htmlPrefilter } from "jquery";
 
 
 var ISSIcon = L.icon({

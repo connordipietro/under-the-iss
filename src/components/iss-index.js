@@ -3,16 +3,19 @@ import { useDispatch, useSelector } from 'react-redux';
 import _ from 'lodash';
 import Moment from 'react-moment';
 import LocationInfo from './location-info'
-import MapISS from './iss-map'
+//import MapISS from './iss-map'
 import WeatherISS from './iss-weather'
 import APOD from './apod'
+import LeafletMap from './iss-map-2'
 
 const ISSIndex = () => {
   const data = useSelector(state => state.data);
   const dispatch = useDispatch();
 
   const handleClick = () => {
-    dispatch(fetchISSCoords())
+     setInterval(() => {
+      dispatch(fetchISSCoords())
+  }, 1000 );
   }
 
   function renderApod () {
@@ -28,7 +31,8 @@ const ISSIndex = () => {
        <span><h5>ISS Coordinates: Lat: {data.coords.lat} Lon: {data.coords.lon}</h5></span>
         <h5>TimeStamp: <Moment unix>{data.IssInfo[0].timestamp}</Moment></h5>
         <LocationInfo></LocationInfo>
-        <MapISS />
+     {/*    <MapISS /> */}
+        <LeafletMap></LeafletMap>
         <WeatherISS></WeatherISS>
         </div>
     }

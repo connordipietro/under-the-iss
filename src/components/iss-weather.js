@@ -15,7 +15,6 @@ const Weather = () => {
 
   const renderWeather = () => { 
     if (weather.result !== false){
-      console.log(weather);
       return (
         //all this needs to be put into state and then called there, this is just to see the data being returned for now
         <div>

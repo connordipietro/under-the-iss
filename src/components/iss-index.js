@@ -28,9 +28,15 @@ const ISSIndex = () => {
   
     if (!_.isEmpty(data.IssInfo)) {
       return <div>
-       <span><h5>ISS Coordinates: Lat: {data.coords.lat} Lon: {data.coords.lon}</h5></span>
-        <h5>TimeStamp: <Moment unix>{data.IssInfo[0].timestamp}</Moment></h5>
-        <LocationInfo></LocationInfo>
+          <div className="container">
+            <div className="row">
+              <div className="col-sm">ISS Coordinates: Lat: {data.coords.lat} Lon: {data.coords.lon}</div>
+              <div className="col-sm"><Moment unix>{data.IssInfo[0].timestamp}</Moment></div>
+            </div>
+            <div className="row">
+              <div className="col-sm"><LocationInfo></LocationInfo></div>
+            </div>
+          </div>      
      {/*    <MapISS /> */}
         <LeafletMap></LeafletMap>
         <WeatherISS></WeatherISS>

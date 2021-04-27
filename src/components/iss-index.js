@@ -17,15 +17,14 @@ const ISSIndex = () => {
       dispatch(fetchISSCoords())
   }, 1000 );
   }
-
+  
   function renderApod () {
     if (_.isEmpty(data.IssInfo)) {
       return <APOD></APOD>
     }
   }
 
-  function renderCoords () {
-  
+  function renderBody () {
     if (!_.isEmpty(data.IssInfo)) {
       return <div>
           <div className="container">
@@ -55,7 +54,7 @@ const ISSIndex = () => {
       </div>
       <div>{renderApod()}</div>
       <div className="container col-md-8 text-center">
-        <div>{renderCoords()}</div>
+        <div>{renderBody()}</div>
       </div>
     </div>
   )

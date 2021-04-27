@@ -8,6 +8,7 @@ import APOD from './apod'
 import LeafletMap from './iss-map-2'
 import IconPopup from './icon-popup'
 
+
 const ISSIndex = () => {
   const data = useSelector(state => state.data);
   const dispatch = useDispatch();
@@ -27,9 +28,9 @@ const ISSIndex = () => {
   function renderBody () {
     if (!_.isEmpty(data.IssInfo)) {
       return <div>
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-sm">
+          <div className="container-fluid">
+            <div className="row">
+              <div className="col-sm">
                 <div className="row">
                  <div className="col-sm">
                  <div>
@@ -49,7 +50,7 @@ const ISSIndex = () => {
                   </div>
                 </div>
               </div>
-                <div class="col-sm">  {/* column 2  */}
+                <div className="col-sm">  {/* column 2  */}
                   <div className="row">
                    <div className="col-sm">
                      <h3><u>Information</u></h3>

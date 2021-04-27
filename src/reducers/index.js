@@ -3,6 +3,7 @@ import IssReducer from "./iss-reducer";
 import LocationReducer from "./location-reducer";
 import WeatherReducer from "./weather-reducer";
 import ApodReducer from "./apod-reducer";
+import IconPopupReducer from "./popup-reducer"
 
 
 const rootReducer = combineReducers({
@@ -10,6 +11,7 @@ const rootReducer = combineReducers({
   location: LocationReducer,
   weather: WeatherReducer,
   apod: ApodReducer,
+  iconpopup: IconPopupReducer
 });
 
 export default rootReducer;

@@ -58,4 +58,16 @@ export function fetchApod() {
   });
 };
 
+export const fetchPeople = () => {
+  return axios.get('http://api.open-notify.org/astros.json')
+  .then(res => {
+    return {
+      type: FETCH_PEOPLE_IN_SPACE,
+      payload: res
+    }
+  }
+    )
+    .catch(e => console.log(e))
+}
+
 

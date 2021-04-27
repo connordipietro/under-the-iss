@@ -13,7 +13,6 @@ const ApodView = () => {
 
 const renderApodView = () => {
   if (apodData.url === false) {
-    console.log('no apodurl')
     return <div></div>
   } else {
     return (

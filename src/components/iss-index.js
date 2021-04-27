@@ -4,7 +4,7 @@ import _ from 'lodash';
 import Moment from 'react-moment';
 import LocationInfo from './location-info'
 import WeatherISS from './iss-weather'
-import Distances from './iss-astronomy'
+import Astronomy from './iss-astronomy'
 import APOD from './apod'
 import LeafletMap from './iss-map-2'
 import Tabs from 'react-bootstrap/Tabs'
@@ -63,8 +63,8 @@ const ISSIndex = () => {
                       <Tab eventKey="weather" title="Weather">
                         <WeatherISS></WeatherISS>
                      </Tab>
-                     <Tab eventKey="distances" title="Astronomy">
-                      <Distances></Distances>
+                     <Tab eventKey="astronomys" title="Astronomy">
+                      <Astronomy></Astronomy>
                      </Tab>
                     <Tab eventKey="crewInfo" title="Crew Information">
                      Crew Information Here

@@ -1,36 +1,36 @@
-import { fetchDistances } from '../actions';
+import { fetchAstronomy } from '../actions';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react'
 
-const Distances = () => {
+const Astronomy = () => {
   const data = useSelector(state => state.data.coords);
-  const distances = useSelector(state => state.distances.data)
+  const astronomys = useSelector(state => state.astronomys.data)
   const lat = data.lat
   const lon = data.lon
 
   const dispatch = useDispatch();
   
   useEffect(() => {
-    dispatch(fetchDistances(lat, lon))
+    dispatch(fetchAstronomy(lat, lon))
   // eslint-disable-next-line react-hooks/exhaustive-deps
-}, [fetchDistances]);
+}, [fetchAstronomy]);
 
-const renderDistances = () => {
+const renderAstronomy = () => {
   return (
     <div className="container">
     <ul className="list-group list-group-flush text-left">
-      <li className="list-group-item">Moon Altitude: {distances.moon_altitude}</li>
-      <li className="list-group-item">Moon Azumith: {distances.moon_azimuth}</li>
-      <li className="list-group-item">Moon Distant: {distances.moon_distance}</li>
-      <li className="list-group-item">Moon Parallactic Angel {distances.moon_parallactic_angle}</li>
-      <li className="list-group-item">Moonrise {distances.moonrise}</li>
-      <li className="list-group-item">Moonset {distances.moonset}</li>
-      <li className="list-group-item">Solar Noon{distances.solar_noon}</li>
-      <li className="list-group-item">Sun Altitude {distances.sun_altitude}</li>
-      <li className="list-group-item">Sun Azimuth {distances.sun_azimuth}</li>
-      <li className="list-group-item">Sun Distance {distances.sun_distance}</li>
-      <li className="list-group-item">Sunrise {distances.sunrise}</li>
-      <li className="list-group-item">Sunset {distances.sunset}</li>
+      <li className="list-group-item">Moon Altitude: {astronomys.moon_altitude}</li>
+      <li className="list-group-item">Moon Azumith: {astronomys.moon_azimuth}</li>
+      <li className="list-group-item">Moon Distant: {astronomys.moon_astronomy}</li>
+      <li className="list-group-item">Moon Parallactic Angel {astronomys.moon_parallactic_angle}</li>
+      <li className="list-group-item">Moonrise {astronomys.moonrise}</li>
+      <li className="list-group-item">Moonset {astronomys.moonset}</li>
+      <li className="list-group-item">Solar Noon {astronomys.solar_noon}</li>
+      <li className="list-group-item">Sun Altitude {astronomys.sun_altitude}</li>
+      <li className="list-group-item">Sun Azimuth {astronomys.sun_azimuth}</li>
+      <li className="list-group-item">Sun Distance {astronomys.sun_astronomy}</li>
+      <li className="list-group-item">Sunrise {astronomys.sunrise}</li>
+      <li className="list-group-item">Sunset {astronomys.sunset}</li>
     </ul>
   </div>
 
@@ -38,11 +38,11 @@ const renderDistances = () => {
 }
 
 return (
-  <div>{renderDistances()}</div>
+  <div>{renderAstronomy()}</div>
 )
 }
 
-export default Distances
+export default Astronomy
 
 
 

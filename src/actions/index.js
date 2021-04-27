@@ -5,6 +5,7 @@ export const FETCH_LOCATION = "FETCH_LOCATION";
 export const FETCH_WEATHER = "FETCH_WEATHER"
 export const FETCH_APOD = "FETCH_APOD"
 export const FETCH_PEOPLE_IN_SPACE = "FETCH-PEOPLE_IN_SPACE"
+export const FETCH_ASTRONOMY = "FETCH_ASTRONOMY"
 
 export function fetchISSCoords() {
   return axios.get(`http://api.open-notify.org/iss-now.json`)
@@ -71,3 +72,15 @@ export const fetchPeople = () => {
 }
 
 
+export function fetchAstronomy(lat, lon) {
+  return axios.get(`https://api.ipgeolocation.io/astronomy?apiKey=2e562711a49149b9bd9cba6d63c3c665&lat=${lat}&long=${lon}`)
+  .then(response => {
+    return {
+      type: FETCH_ASTRONOMY,
+      payload: response
+    };
+  })
+  .catch(error => {
+    alert('Error');
+  });
+};

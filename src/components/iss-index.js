@@ -4,10 +4,12 @@ import _ from 'lodash';
 import Moment from 'react-moment';
 import LocationInfo from './location-info'
 import WeatherISS from './iss-weather'
+import Astronomy from './iss-astronomy'
 import APOD from './apod'
 import LeafletMap from './iss-map-2'
-import IconPopup from './icon-popup'
 
+import Tabs from 'react-bootstrap/Tabs'
+import Tab from 'react-bootstrap/Tab'
 
 const ISSIndex = () => {
   const data = useSelector(state => state.data);
@@ -58,7 +60,20 @@ const ISSIndex = () => {
                   </div>
                 <div className="row">
                   <div className="col-sm">
-                   <WeatherISS></WeatherISS>
+                    <Tabs defaultActiveKey="weather" id="uncontrolled-tab-example">
+                      <Tab eventKey="weather" title="Weather">
+                        <WeatherISS></WeatherISS>
+                     </Tab>
+                     <Tab eventKey="astronomys" title="Astronomy">
+                      <Astronomy></Astronomy>
+                     </Tab>
+                    <Tab eventKey="crewInfo" title="Crew Information">
+                     Crew Information Here
+                    </Tab>
+                    <Tab eventKey="LOEInfo" title="Next Meteor Approach">
+                     Crew Information Here
+                    </Tab>
+                  </Tabs>
                   </div>
                 </div>
               </div>

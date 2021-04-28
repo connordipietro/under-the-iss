@@ -1,7 +1,6 @@
 import { fetchWeather } from '../actions';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react'
-import Moment from 'react-moment';
 
 const Weather = () => {
   const data = useSelector(state => state.data);

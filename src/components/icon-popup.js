@@ -6,6 +6,7 @@ import Modal from "react-bootstrap/Modal";
 
 const PopupModalForPeopleInSpace = (props) => {
   const people = useSelector(state => state.iconpopup)
+  let x = 0
     return (
       <>
         <Modal {...props} 
@@ -18,7 +19,7 @@ const PopupModalForPeopleInSpace = (props) => {
           </Modal.Header>
           <Modal.Body>{people.peopleInfo.map((i) => {
             return(
-              <p className="lead">{i.name}</p>
+              <p className="lead" key={x++}>{i.name}</p>
             )
           })}</Modal.Body>
           <Modal.Footer>

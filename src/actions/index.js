@@ -25,7 +25,6 @@ export function fetchISSCoords() {
 export function fetchLocationInfo(lat, lon) {
   return axios.get(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lon}&key=AIzaSyCwB-2_AckUG3hMtx4P2X2kUTcXt2wenRc`)
   .then(response => {
-    console.log(response)
     return {
       type: FETCH_LOCATION,
       payload: response

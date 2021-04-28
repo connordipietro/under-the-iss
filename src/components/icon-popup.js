@@ -105,7 +105,6 @@ const IconPopup =() => {
 
 
   useEffect(()=>{
-    console.log(people);
     dispatch(fetchPeople())
     // eslint-disable-next-line react-hooks/exhaustive-deps
   },[fetchPeople])

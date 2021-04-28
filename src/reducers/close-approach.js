@@ -7,7 +7,6 @@ const DEFAULT_STATE = {
 const CloseApproachReducer = function(state = DEFAULT_STATE, action) {
   switch (action.type) {
     case FETCH_CLOSEAPPROACH:
-      console.log(action.payload.data.data[0][0])
     return {
           result: {
             des: action.payload.data.data[0][0],

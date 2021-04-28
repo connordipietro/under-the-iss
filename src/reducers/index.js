@@ -13,11 +13,10 @@ const rootReducer = combineReducers({
   location: LocationReducer,
   weather: WeatherReducer,
   apod: ApodReducer,
- iss-icon-popup
-  iconpopup: IconPopupReducer
-  astronomys: DistanceReducer
+  iconpopup: IconPopupReducer,
+  astronomys: DistanceReducer,
   closeApproach: CloseApproachReducer
- main
+
 });
 
 export default rootReducer;

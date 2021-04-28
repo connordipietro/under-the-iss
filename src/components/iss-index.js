@@ -8,6 +8,7 @@ import Astronomy from './iss-astronomy'
 import APOD from './apod'
 import CloseApproach from './close-approach'
 import LeafletMap from './iss-map-2'
+import LiveFeed from './live-iss-feed'
 
 import Tabs from 'react-bootstrap/Tabs'
 import Tab from 'react-bootstrap/Tab'
@@ -74,6 +75,9 @@ const ISSIndex = () => {
                     </Tab>
                     <Tab eventKey="LOEInfo" title="Next Meteor Approach">
                      <CloseApproach></CloseApproach>
+                    </Tab>
+                    <Tab eventKey="Live-Feed" title="Live ISS Feed">
+                     <LiveFeed />
                     </Tab>
                   </Tabs>
                   </div>

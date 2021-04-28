@@ -16,16 +16,14 @@ const LayerButtons = () => {
   }
 
   return (
-    <div className="align-bottom mt-4">
-      <h3><u>Map Overlay</u></h3>
-      <div className="btn-group" role="group" aria-label="Basic example">
-        <button type="button" className="btn btn-primary btn-secondary" onClick={() => handleLayerClick(cloud)}>Clouds</button>
-        <button type="button" className="btn btn-primary btn-secondary" onClick={() => handleLayerClick(rain)}>Precipitation</button>
-        <button type="button" className="btn btn-primary btn-secondary" onClick={() => handleLayerClick(wind)}>Wind</button>
-        <button type="button" className="btn btn-primary btn-secondary" onClick={() => handleLayerClick(pressure)}>Pressure</button>
-        <button type="button" className="btn btn-primary btn-secondary" onClick={() => handleLayerClick(temp)}>Temperature</button>
-        <button type="button" className="btn btn-primary btn-secondary" onClick={() => handleLayerClick(null)}>No Overlay</button>
-        </div>
+    <div className="align-bottom mt-4 mb-3">
+        <h4><u>Map Overlay</u></h4>
+        <button type="button" className="btn btn-outline-secondary m-1 mt-3" onClick={() => handleLayerClick(cloud)}>Clouds</button>
+        <button type="button" className="btn btn-outline-secondary m-1 mt-3" onClick={() => handleLayerClick(rain)}>Precipitation</button>
+        <button type="button" className="btn btn-outline-secondary m-1 mt-3" onClick={() => handleLayerClick(wind)}>Wind</button>
+        <button type="button" className="btn btn-outline-secondary m-1 mt-3" onClick={() => handleLayerClick(pressure)}>Pressure</button>
+        <button type="button" className="btn btn-outline-secondary m-1 mt-3" onClick={() => handleLayerClick(temp)}>Temperature</button>
+        <button type="button" className="btn  btn-outline-secondary m-1 mt-3" onClick={() => handleLayerClick(null)}>No Overlay</button>
       </div>
 
 

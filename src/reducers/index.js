@@ -7,6 +7,7 @@ import IconPopupReducer from "./popup-reducer"
 
 import DistanceReducer from "./astronomy-reducer"
 import CloseApproachReducer from "./close-approach"
+import mapLayerReducer from './map-layer-reducer'
 
 const rootReducer = combineReducers({
   data: IssReducer,
@@ -15,7 +16,8 @@ const rootReducer = combineReducers({
   apod: ApodReducer,
   iconpopup: IconPopupReducer,
   astronomys: DistanceReducer,
-  closeApproach: CloseApproachReducer
+  closeApproach: CloseApproachReducer,
+  layer: mapLayerReducer
 
 });
 

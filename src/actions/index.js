@@ -7,6 +7,7 @@ export const FETCH_APOD = "FETCH_APOD"
 export const FETCH_PEOPLE_IN_SPACE = "FETCH-PEOPLE_IN_SPACE"
 export const FETCH_ASTRONOMY = "FETCH_ASTRONOMY"
 export const FETCH_CLOSEAPPROACH = "FETCH_CLOSEAPPROACH"
+export const CHANGE_LAYER = "CHANGE_LAYER"
 
 export function fetchISSCoords() {
   return axios.get(`http://api.open-notify.org/iss-now.json`)
@@ -100,3 +101,9 @@ export function fetchCloseApproach() {
   });
 };
 
+export function changeLayer(layer) {
+    return {
+      type: CHANGE_LAYER,
+      payload: layer
+    };
+}

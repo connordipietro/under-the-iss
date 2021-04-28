@@ -19,8 +19,21 @@ const LeafletMap = (props) => {
 
   function renderMap() {
       let url = `https://tile.openweathermap.org/map/${stateLayer}/{z}/{x}/{y}.png?appid=1fc1127bc926b88b171314897133dde9`
+      if (stateLayer === null) {
+        return (
+          <MapContainer className="map" center={position} zoom="2" key={stateLayer}>
+          <TileLayer attribution='&amp;copy <a href="https://www.osm.org/copyright">OpenStreetMap</a> contributors'url="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"/>
+  
+          <Marker position={position} icon={ISSIcon}>
+            <Popup>
+               <IconPopup/>
+              </Popup>
+          </Marker>
+       </MapContainer>
+        )
+      } else 
       return (
-        <MapContainer className="map" center={position} zoom="2.5" key={stateLayer}>
+        <MapContainer className="map" center={position} zoom="2" key={stateLayer}>
           <TileLayer attribution='&amp;copy <a href="https://www.osm.org/copyright">OpenStreetMap</a> contributors'url="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"/>
           <TileLayer attribution='&amp;copy <a href=https://www.osm.org/copyright">OpenStreetMap</a> contributors'url={url}/>
           <Marker position={position} icon={ISSIcon}>

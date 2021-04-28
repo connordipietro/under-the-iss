@@ -20,7 +20,6 @@ const DEFAULT_STATE = {
 const DistanceRecuder = function(state = DEFAULT_STATE, action) {
   switch (action.type) {
     case FETCH_ASTRONOMY:
-      console.log(action.payload)
       return {
             data: {
               moon_altitude: action.payload.data.moon_altitude,

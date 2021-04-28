@@ -9,6 +9,8 @@ import APOD from './apod'
 import CloseApproach from './close-approach'
 import LeafletMap from './iss-map-2'
 import LiveFeed from './live-iss-feed'
+import LayerButtons from './map-layer-buttons'
+
 
 import Tabs from 'react-bootstrap/Tabs'
 import Tab from 'react-bootstrap/Tab'
@@ -66,6 +68,7 @@ const ISSIndex = () => {
                     <Tabs defaultActiveKey="weather" id="uncontrolled-tab-example">
                       <Tab eventKey="weather" title="Weather">
                         <WeatherISS></WeatherISS>
+                        <LayerButtons></LayerButtons>
                      </Tab>
                      <Tab eventKey="astronomys" title="Astronomy">
                       <Astronomy></Astronomy>

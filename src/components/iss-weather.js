@@ -14,7 +14,7 @@ const Weather = () => {
 
   const renderWeather = () => { 
     if (weather.result !== false){
-      const iconURL = `http://openweathermap.org/img/wn/${weather.result.data.weather[0].icon}@4x.png`
+      /* const iconURL = `http://openweathermap.org/img/wn/${weather.result.data.weather[0].icon}@4x.png` */
       return (
         //all this needs to be put into state and then called there, this is just to see the data being returned for now
         <div>
@@ -39,7 +39,7 @@ const Weather = () => {
                 </ul>
               </div>
             </div>
-            <img src={iconURL} alt="..."></img>
+         {/*    <img src={iconURL} alt="..."></img> */}
           </div>
       </div>
       )

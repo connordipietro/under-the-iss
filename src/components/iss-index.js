@@ -6,10 +6,12 @@ import LocationInfo from './location-info'
 import WeatherISS from './iss-weather'
 import Astronomy from './iss-astronomy'
 import APOD from './apod'
+import CloseApproach from './close-approach'
 import LeafletMap from './iss-map-2'
 
 import Tabs from 'react-bootstrap/Tabs'
 import Tab from 'react-bootstrap/Tab'
+
 
 const ISSIndex = () => {
   const data = useSelector(state => state.data);
@@ -71,7 +73,7 @@ const ISSIndex = () => {
                      Crew Information Here
                     </Tab>
                     <Tab eventKey="LOEInfo" title="Next Meteor Approach">
-                     Crew Information Here
+                     <CloseApproach></CloseApproach>
                     </Tab>
                   </Tabs>
                   </div>

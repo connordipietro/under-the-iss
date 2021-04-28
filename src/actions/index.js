@@ -6,6 +6,7 @@ export const FETCH_WEATHER = "FETCH_WEATHER"
 export const FETCH_APOD = "FETCH_APOD"
 export const FETCH_PEOPLE_IN_SPACE = "FETCH-PEOPLE_IN_SPACE"
 export const FETCH_ASTRONOMY = "FETCH_ASTRONOMY"
+export const FETCH_CLOSEAPPROACH = "FETCH_CLOSEAPPROACH"
 
 export function fetchISSCoords() {
   return axios.get(`http://api.open-notify.org/iss-now.json`)
@@ -23,6 +24,7 @@ export function fetchISSCoords() {
 export function fetchLocationInfo(lat, lon) {
   return axios.get(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lon}&key=AIzaSyCwB-2_AckUG3hMtx4P2X2kUTcXt2wenRc`)
   .then(response => {
+    console.log(response)
     return {
       type: FETCH_LOCATION,
       payload: response
@@ -84,3 +86,17 @@ export function fetchAstronomy(lat, lon) {
     alert('Error');
   });
 };
+
+export function fetchCloseApproach() {
+  return axios.get(`https://ssd-api.jpl.nasa.gov/cad.api?dist-max=10LD&date-min=now&sort=date&diameter=true&fullname=true`)
+  .then(response => {
+    return {
+      type: FETCH_CLOSEAPPROACH,
+      payload: response
+    };
+  })
+  .catch(error => {
+    alert('Error');
+  });
+};
+

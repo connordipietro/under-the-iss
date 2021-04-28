@@ -18,22 +18,29 @@ const Astronomy = () => {
 const renderAstronomy = () => {
   return (
     <div className="container">
-    <ul className="list-group list-group-flush text-left">
-      <li className="list-group-item">Moon Altitude: {astronomys.moon_altitude}</li>
-      <li className="list-group-item">Moon Azumith: {astronomys.moon_azimuth}</li>
-      <li className="list-group-item">Moon Distant: {astronomys.moon_astronomy}</li>
-      <li className="list-group-item">Moon Parallactic Angel {astronomys.moon_parallactic_angle}</li>
-      <li className="list-group-item">Moonrise {astronomys.moonrise}</li>
-      <li className="list-group-item">Moonset {astronomys.moonset}</li>
-      <li className="list-group-item">Solar Noon {astronomys.solar_noon}</li>
-      <li className="list-group-item">Sun Altitude {astronomys.sun_altitude}</li>
-      <li className="list-group-item">Sun Azimuth {astronomys.sun_azimuth}</li>
-      <li className="list-group-item">Sun Distance {astronomys.sun_astronomy}</li>
-      <li className="list-group-item">Sunrise {astronomys.sunrise}</li>
-      <li className="list-group-item">Sunset {astronomys.sunset}</li>
-    </ul>
-  </div>
-
+      <div className="row">
+        <div className="col">
+          <ul className="list-group list-group-flush text-left">
+            <li className="list-group-item">Moon Altitude: {astronomys.moon_altitude}</li>
+            <li className="list-group-item">Moon Azumith: {astronomys.moon_azimuth}</li>
+            <li className="list-group-item">Moon Distance: {astronomys.moon_distance}</li>
+            <li className="list-group-item">Moon Parallactic Angel {astronomys.moon_parallactic_angle}</li>
+            <li className="list-group-item">Moonrise {astronomys.moonrise}</li>
+            <li className="list-group-item">Moonset {astronomys.moonset}</li>
+          </ul>
+        </div>
+        <div className="col">
+          <ul className="list-group list-group-flush text-left">
+            <li className="list-group-item">Solar Noon {astronomys.solar_noon}</li>
+            <li className="list-group-item">Sun Altitude {astronomys.sun_altitude}</li>
+            <li className="list-group-item">Sun Azimuth {astronomys.sun_azimuth}</li>
+            <li className="list-group-item">Sun Distance {astronomys.sun_distance}</li>
+            <li className="list-group-item">Sunrise {astronomys.sunrise}</li>
+            <li className="list-group-item">Sunset {astronomys.sunset}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
   )
 }
 
@@ -43,10 +50,6 @@ return (
 }
 
 export default Astronomy
-
-
-
-
 
 
 

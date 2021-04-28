@@ -3,6 +3,8 @@ import IssReducer from "./iss-reducer";
 import LocationReducer from "./location-reducer";
 import WeatherReducer from "./weather-reducer";
 import ApodReducer from "./apod-reducer";
+import IconPopupReducer from "./popup-reducer"
+
 import DistanceReducer from "./astronomy-reducer"
 import CloseApproachReducer from "./close-approach"
 
@@ -11,8 +13,11 @@ const rootReducer = combineReducers({
   location: LocationReducer,
   weather: WeatherReducer,
   apod: ApodReducer,
-  astronomys: DistanceReducer,
+ iss-icon-popup
+  iconpopup: IconPopupReducer
+  astronomys: DistanceReducer
   closeApproach: CloseApproachReducer
+ main
 });
 
 export default rootReducer;

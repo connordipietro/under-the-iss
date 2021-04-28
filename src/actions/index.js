@@ -4,6 +4,7 @@ export const FETCH_ISS = "FETCH_ISS";
 export const FETCH_LOCATION = "FETCH_LOCATION";
 export const FETCH_WEATHER = "FETCH_WEATHER"
 export const FETCH_APOD = "FETCH_APOD"
+export const FETCH_PEOPLE_IN_SPACE = "FETCH-PEOPLE_IN_SPACE"
 export const FETCH_ASTRONOMY = "FETCH_ASTRONOMY"
 export const FETCH_CLOSEAPPROACH = "FETCH_CLOSEAPPROACH"
 
@@ -59,6 +60,19 @@ export function fetchApod() {
     alert('Error');
   });
 };
+
+export const fetchPeople = () => {
+  return axios.get('http://api.open-notify.org/astros.json')
+  .then(res => {
+    return {
+      type: FETCH_PEOPLE_IN_SPACE,
+      payload: res
+    }
+  }
+    )
+    .catch(e => console.log(e))
+}
+
 
 export function fetchAstronomy(lat, lon) {
   return axios.get(`https://api.ipgeolocation.io/astronomy?apiKey=2e562711a49149b9bd9cba6d63c3c665&lat=${lat}&long=${lon}`)

@@ -5,6 +5,7 @@ export const FETCH_LOCATION = "FETCH_LOCATION";
 export const FETCH_WEATHER = "FETCH_WEATHER"
 export const FETCH_APOD = "FETCH_APOD"
 export const FETCH_ASTRONOMY = "FETCH_ASTRONOMY"
+export const FETCH_CLOSEAPPROACH = "FETCH_CLOSEAPPROACH"
 
 export function fetchISSCoords() {
   return axios.get(`http://api.open-notify.org/iss-now.json`)
@@ -22,6 +23,7 @@ export function fetchISSCoords() {
 export function fetchLocationInfo(lat, lon) {
   return axios.get(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lon}&key=AIzaSyCwB-2_AckUG3hMtx4P2X2kUTcXt2wenRc`)
   .then(response => {
+    console.log(response)
     return {
       type: FETCH_LOCATION,
       payload: response
@@ -35,7 +37,6 @@ export function fetchLocationInfo(lat, lon) {
 export function fetchWeather(lat, lon) {
   return axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=1fc1127bc926b88b171314897133dde9&units=imperial`)
   .then(response => {
-    console.log(response)
     return {
       type: FETCH_WEATHER,
       payload: response
@@ -64,6 +65,19 @@ export function fetchAstronomy(lat, lon) {
   .then(response => {
     return {
       type: FETCH_ASTRONOMY,
+      payload: response
+    };
+  })
+  .catch(error => {
+    alert('Error');
+  });
+};
+
+export function fetchCloseApproach() {
+  return axios.get(`https://ssd-api.jpl.nasa.gov/cad.api?dist-max=10LD&date-min=now&sort=date&diameter=true&fullname=true`)
+  .then(response => {
+    return {
+      type: FETCH_CLOSEAPPROACH,
       payload: response
     };
   })

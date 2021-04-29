@@ -23,7 +23,6 @@ const LeafletMap = (props) => {
         return (
           <MapContainer className="map" center={position} zoom="2" key={stateLayer}>
           <TileLayer attribution='&amp;copy <a href="https://www.osm.org/copyright">OpenStreetMap</a> contributors'url="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"/>
-  
           <Marker position={position} icon={ISSIcon}>
             <Popup>
                <IconPopup/>

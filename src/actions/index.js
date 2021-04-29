@@ -67,11 +67,12 @@ export const fetchPeople = () => {
     return {
       type: FETCH_PEOPLE_IN_SPACE,
       payload: res
-    }
-  }
-    )
-    .catch(e => console.log(e))
-}
+    };
+  })
+    .catch(error => {
+      alert('Error')
+    });
+};
 
 
 export function fetchAstronomy(lat, lon) {

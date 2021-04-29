@@ -10,18 +10,17 @@
 }
 
 .icon-link:hover {
-  color:#0000EE
+  color: #0000ee;
 }
 
 /* [1] The container */
 .img-hover-zoom {
-  
   overflow: hidden; /* [1.2] Hide the overflowing of child elements */
 }
 
 /* [2] Transition property for smooth transformation of images */
 .img-hover-zoom img {
-  transition: transform .5s ease;
+  transition: transform 0.5s ease;
 }
 
 /* [3] Finally, transforming the image when container gets hovered */
@@ -30,23 +29,29 @@
 }
 
 .modal-header {
-background-color: black;
-background-image:
-radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
-radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
-radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
-radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
-background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px; 
-background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+  background-color: black;
+  background-image: radial-gradient(
+      white,
+      rgba(255, 255, 255, 0.2) 2px,
+      transparent 40px
+    ),
+    radial-gradient(white, rgba(255, 255, 255, 0.15) 1px, transparent 30px),
+    radial-gradient(white, rgba(255, 255, 255, 0.1) 2px, transparent 40px),
+    radial-gradient(
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0.1) 2px,
+      transparent 30px
+    );
+  background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+  background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
 }
 
 .close {
   color: white;
-  opacity: 1
+  opacity: 1;
 }
 
-.close:hover{
+.close:hover {
   color: red;
   font-size: 35px;
-  
 }

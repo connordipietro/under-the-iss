@@ -25,12 +25,6 @@ const LayerButtons = () => {
         <button type="button" className="btn btn-outline-secondary m-1 mt-3" onClick={() => handleLayerClick(temp)}>Temperature</button>
         <button type="button" className="btn  btn-outline-secondary m-1 mt-3" onClick={() => handleLayerClick(null)}>No Overlay</button>
       </div>
-
-
-
-
-
-
   )
 }
 
